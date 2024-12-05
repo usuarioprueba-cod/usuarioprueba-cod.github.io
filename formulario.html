@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Bendito</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Imagen/icon.jpeg">
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("comentarios-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                var nombre = document.getElementById("nombre").value;
+                var telefono = document.getElementById("telefono").value;
+                var comentario = document.getElementById("comentario").value;
+                var calificacion = document.getElementById("calificacion").value;
+                var mejoras = document.getElementById("mejoras").value;
+
+                var mensaje = "Comentario de: " + nombre + "\n";
+                mensaje += "Teléfono: " + telefono + "\n";
+                mensaje += "Comentario: " + comentario + "\n";
+                mensaje += "Calificación: " + calificacion + "\n";
+                mensaje += "Mejoras sugeridas: " + mejoras;
+
+                var mensajeCodificado = encodeURIComponent(mensaje);
+
+                var numeroTelefono = "595971236736";
+                var enlaceWhatsApp = "https://api.whatsapp.com/send?phone=" + numeroTelefono + "&text=" + mensajeCodificado;
+
+                window.open(enlaceWhatsApp, "_blank");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">Sabor Bendito</a>
+            <input type="checkbox" id="menu">
+            <label for="menu"><img src="Imagen/Logo menu rayas.png" class="menu-icono" alt=""></label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="tel:+595971236736">Teléfono</a></li>
+                    <li><a href="formulario.html">Comentarios</a></li>
+                    <li><a href="https://api.whatsapp.com/message/PJU42S2NKISCG1?autoload=1&app_absent=0">WhatsApp 📲</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header content container">
+        
+            <div class="header-info">
+            </br>
+            </br>
+            </br>
+                <h1>¡Déjanos tu comentario!</h1>
+                <h2>Tu opinión es importante para nosotros, envíanos tu comentario:</h2>
+                <form id="comentarios-form" action="#" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" required>
+
+                    <label for="comentario">Comentario:</label>
+                    <input type="text" id="comentario" name="comentario" required>
+
+                    <label for="calificacion">Calificación:</label>
+                    <select id="calificacion" name="calificacion" required>
+                        <option value="noticias" disabled selected>Seleccione una Opción</option>
+                        <option value="Excelente">Excelente</option>
+                        <option value="Muy Bueno">Muy Bueno</option>
+                        <option value="Bueno">Bueno</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Malo">Malo</option>
+                    </select>
+
+                    <label for="mejoras">¿Qué te gustaría que mejoremos?</label>
+                    <input type="text" id="mejoras" name="mejoras" required>
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <footer class="footer container">
+        <h3>¡Síguenos en nuestras redes sociales!</h3>
+        <div class="links">
+            <ul>
+                <li><a href="https://www.instagram.com/saborbendito.py" class="social-link instagram">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@saborbendito.py" class="social-link TikTok">TikTok</a></li>
+                <li><a href="https://www.facebook.com/saborbendito.py" class="social-link facebook">Facebook</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

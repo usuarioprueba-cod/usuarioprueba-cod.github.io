@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Bendito</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Imagen/icon.jpeg">
+</head>
+<body>
+    <header class="header">
+
+        <div class="menu container">
+
+            <a href="#" class="logo">Sabor Bendito</a>
+            <input type="checkbox" id="menu">
+            <label for="menu"><img src="Imagen/Logo menu rayas.png" class="menu-icono" alt=""></label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html"> Inicio </a></li>
+                    <li><a href="tel:+595971236736"> Teléfono </a></li>
+                    <li><a href="formulario.html"> Comentarios </a></li>
+                    <li><a href="https://api.whatsapp.com/message/PJU42S2NKISCG1?autoload=1&app_absent=0"> WhatsApp 📲</a></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
+        <br>
+</head>
+<body>
+    <style>
+        body {
+            background-image: url('Imagen/Fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            margin-top: 155px;
+        }
+
+        table td {
+            width: 90%; /* Ocupa el 90% del ancho disponible */
+            max-width: 600px; /* Máximo ancho para pantallas grandes */
+            margin: 50px auto; /* Centra la tabla horizontalmente */
+            border-collapse: collapse; /* Quita espacios entre bordes */
+            border: 10px solid rgb(153, 51, 51);
+        }
+
+        td {
+            padding: 10px;
+            text-align: center; /* Centra el contenido */
+        }
+
+        td img {
+            max-width: 100% ; /* Imagen se ajusta al ancho del contenedor */
+            height: auto; /* Mantiene proporciones */
+        }
+
+        @media (max-width: 768px) {
+            table {
+                width: 100%; /* La tabla ocupa todo el ancho disponible */
+                margin: 20px auto; /* Reduce el margen superior */
+            }
+
+            td {
+                padding: 5px; /* Reduce el relleno */
+            }
+        }
+
+        @media (max-width: 480px) {
+            table {
+                width: 100%; /* Tabla ocupa todo el ancho */
+                margin: 10px auto;
+            }
+
+            td {
+                padding: 3px; /* Reduce aún más el relleno */
+            }
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img src="Imagen/Carta1.jpeg" alt="Carta 1"></td>
+        </tr>
+        <tr>
+            <td><img src="Imagen/Carta2.jpeg" alt="Carta 2"></td>
+        </tr>
+        <tr>
+            <td><img src="Imagen/Carta3.jpeg" alt="Carta 3"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
